@@ -123,12 +123,13 @@ footer { text-align: center; padding: 3rem 1rem; color: #64748b; font-size: 0.9r
     border-radius: 2px;
 }
 
-/* Menu Mobile Déroulant (aligné sous le nom à gauche, élégant et en longueur) */
+/* Menu Mobile Déroulant (aligné sous ton nom à gauche) */
 .mobile-menu {
     position: absolute;
-    top: 100%; /* S'affiche juste sous la navbar */
-    left: 5%;  /* Aligné à gauche, directement sous ton nom */
-    width: 320px; /* Belle largeur pour de la longueur */
+    top: 100%; /* S'affiche juste sous la barre de navigation */
+    left: 5%;  /* S'aligne strictement du même côté que ton nom */
+    right: auto; /* Annule tout alignement à droite */
+    width: 320px; 
     background-color: #ffffff;
     border-radius: 12px;
     border: 1px solid #e2e8f0;
