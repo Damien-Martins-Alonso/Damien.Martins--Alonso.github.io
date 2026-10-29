@@ -72,4 +72,98 @@ footer { text-align: center; padding: 3rem 1rem; color: #64748b; font-size: 0.9r
     .nav-links { display: none; /* In a real site, add a hamburger menu */ }
     .navbar { padding: 1rem; justify-content: center; }
     .grid-2, .grid-3 { grid-template-columns: 1fr; }
+
+/* --- RESPONSIVE HAMBURGER MENU --- */
+
+/* Par défaut, le bouton hamburger et le menu mobile sont cachés sur grand écran */
+.hamburger {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 28px;
+    height: 21px;
+    padding: 0;
+}
+
+.hamburger span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: var(--primary-color, #1e293b);
+    border-radius: 2px;
+}
+
+/* Style du menu mobile overlay plein écran */
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    right: -100%; /* Caché hors de l'écran à droite */
+    width: 100%;
+    height: 100vh;
+    background-color: #ffffff;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    transition: right 0.3s ease-in-out;
+}
+
+.mobile-menu.active {
+    right: 0; /* Fait glisser le menu pour l'afficher */
+}
+
+.mobile-menu-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 3rem;
+}
+
+.mobile-brand {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--primary-color, #1e293b);
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    font-size: 2.5rem;
+    cursor: pointer;
+    color: var(--primary-color, #1e293b);
+    line-height: 1;
+}
+
+.mobile-nav-links {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 0;
+}
+
+.mobile-nav-links li a {
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-decoration: none;
+    color: #334155;
+    transition: color 0.2s;
+}
+
+.mobile-nav-links li a:hover {
+    color: var(--primary-color, #2563eb);
+}
+
+/* Media Query : Quand l'écran rétrécit (tablettes / mobiles / fenêtres réduites) */
+@media screen and (max-width: 900px) {
+    .desktop-nav {
+        display: none; /* Masque le menu classique horizontal */
+    }
+    .hamburger {
+        display: flex; /* Affiche l'icône hamburger */
+    }
+}
 }
