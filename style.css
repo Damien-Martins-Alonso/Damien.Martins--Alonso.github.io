@@ -140,9 +140,9 @@ footer { text-align: center; padding: 3rem 1rem; color: #64748b; font-size: 0.9r
 /* Menu Mobile Déroulant (Dropdown compact sous le nom) */
 .mobile-menu {
     position: absolute; 
-    top: calc(100% + 10px);
-    left: 5%;
-    width: 280px; 
+    top: 100%;
+    left: 0;
+    width: 100%; 
     max-width: 85vw;
     background-color: #ffffff;
     border-radius: 12px;
