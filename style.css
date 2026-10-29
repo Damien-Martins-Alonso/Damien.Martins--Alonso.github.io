@@ -122,69 +122,41 @@ footer { text-align: center; padding: 3rem 1rem; color: #64748b; font-size: 0.9r
     border-radius: 2px;
 }
 
-/* --- MENU MOBILE DÉROULANT (La carte blanche alignée à gauche sous ton nom) --- */
+/* --- VRAI MENU MOBILE DÉROULANT (DROPDOWN FULL-WIDTH) --- */
 .mobile-menu {
     position: absolute; 
-    top: calc(100% + 15px); /* S'accroche sous la navbar avec un petit espace esthétique */
-    left: 5%; /* Aligné précisément sous ton prénom */
-    right: auto;
-    width: 90%; 
-    max-width: 320px; /* Ne prend pas tout l'écran */
-    height: auto; 
+    top: 100%; /* S'accroche directement au bas de la navbar */
+    left: 0;   /* Commence tout à gauche de l'écran */
+    width: 100%; /* Prend toute la largeur de l'écran */
     background-color: #ffffff;
-    border-radius: 12px;
-    border: 1px solid #e2e8f0;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15); /* Ombre bien marquée pour le détacher du fond */
-    z-index: 2000;
+    border-bottom: 2px solid #e2e8f0;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.08);
+    z-index: 1000;
+    
     display: flex;
     flex-direction: column;
-    padding: 1.5rem;
+    padding: 1.5rem 8%;
     
-    /* Animation de glissement et gestion des clics */
+    /* Animation de déroulement vers le bas */
     opacity: 0;
     visibility: hidden;
-    pointer-events: none; /* TRÈS IMPORTANT : évite les clics fantômes quand le menu est fermé */
-    transform: translateY(-15px);
-    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
+    pointer-events: none;
+    transform: translateY(-10px);
+    transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s ease;
 }
 
 .mobile-menu.active {
     opacity: 1;
     visibility: visible;
-    pointer-events: auto; /* Réactive les clics une fois ouvert */
+    pointer-events: auto;
     transform: translateY(0);
-}
-
-.mobile-menu-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 1.5rem;
-    width: 100%;
-    border-bottom: 1px solid #f1f5f9;
-    padding-bottom: 1rem;
-}
-
-.mobile-brand {
-    font-size: 1rem;
-    font-weight: 700;
-    color: var(--primary-color, #1e293b);
-}
-
-.close-btn {
-    background: none;
-    border: none;
-    font-size: 1.8rem;
-    cursor: pointer;
-    color: var(--primary-color, #1e293b);
-    line-height: 1;
 }
 
 .mobile-nav-links {
     list-style: none;
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 1.2rem;
     padding: 0;
     margin: 0;
 }
@@ -193,12 +165,20 @@ footer { text-align: center; padding: 3rem 1rem; color: #64748b; font-size: 0.9r
     font-size: 1.1rem;
     font-weight: 500;
     text-decoration: none;
-    color: #475569;
-    transition: color 0.2s;
+    color: #334155;
+    display: block;
+    padding: 0.4rem 0;
+    border-bottom: 1px solid #f1f5f9;
+    transition: color 0.2s, padding-left 0.2s;
+}
+
+.mobile-nav-links li:last-child a {
+    border-bottom: none;
 }
 
 .mobile-nav-links li a:hover {
-    color: var(--primary-color, #2563eb);
+    color: #2563eb;
+    padding-left: 5px; /* Petit effet de survol sympa */
 }
 
 /* Active le burger sous 1024px */
