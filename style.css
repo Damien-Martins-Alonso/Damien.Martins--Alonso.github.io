@@ -104,7 +104,7 @@ footer { text-align: center; padding: 3rem 1rem; color: #64748b; font-size: 0.9r
     .nav-links { display: none; /* In a real site, add a hamburger menu */ }
     .navbar { padding: 1rem; justify-content: center; }
     .grid-2, .grid-3 { grid-template-columns: 1fr; }
-
+}
 /* --- RESPONSIVE HAMBURGER & OVERLAY --- */
 .hamburger {
     display: none;
@@ -200,5 +200,4 @@ footer { text-align: center; padding: 3rem 1rem; color: #64748b; font-size: 0.9r
     .hamburger {
         display: flex;
     }
-}
 }
