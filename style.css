@@ -96,15 +96,6 @@ a { color: inherit; text-decoration: none; }
 /* Footer */
 footer { text-align: center; padding: 3rem 1rem; color: #64748b; font-size: 0.9rem; border-top: 1px solid #e2e8f0; }
 
-/* Responsive */
-@media (max-width: 768px) {
-    .hero-content { flex-direction: column-reverse; text-align: center; }
-    .hero-text h1 { font-size: 2.5rem; }
-    .tags, .actions { justify-content: center; }
-    .nav-links { display: none; /* In a real site, add a hamburger menu */ }
-    .navbar { padding: 1rem; justify-content: center; }
-    .grid-2, .grid-3 { grid-template-columns: 1fr; }
-}
 /* --- RESPONSIVE HAMBURGER & OVERLAY --- */
 .hamburger {
     display: none;
@@ -192,7 +183,15 @@ footer { text-align: center; padding: 3rem 1rem; color: #64748b; font-size: 0.9r
     color: var(--primary-color, #2563eb);
 }
 
-/* Point de rupture (Breakpoint) : active le hamburger dès que l'écran se réduit */
+/* Responsive Media Queries */
+@media (max-width: 768px) {
+    .hero-content { flex-direction: column-reverse; text-align: center; }
+    .hero-text h1 { font-size: 2.5rem; }
+    .tags, .actions { justify-content: center; }
+    .grid-2, .grid-3 { grid-template-columns: 1fr; }
+}
+
+/* Point de rupture pour basculer sur le menu Hamburger */
 @media screen and (max-width: 1024px) {
     .desktop-nav {
         display: none;
