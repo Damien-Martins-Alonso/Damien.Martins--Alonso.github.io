@@ -1,1 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Damien Martins--Alonso | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts for modern typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
 
+  <!-- HEADER / NAVIGATION -->
+    <header class="navbar">
+        <div class="nav-brand"><a href="#welcome">Damien Martins--Alonso</a></div>
+        
+        <!-- Menu Desktop -->
+        <nav class="desktop-nav">
+            <ul class="nav-links">
+                <li><a href="#welcome">Accueil</a></li>
+                <li><a href="#elevator">Elevator Pitch</a></li>
+                <li><a href="#engineering">Ingénierie</a></li>
+                <li><a href="#career">Carrière</a></li>
+                <li><a href="#mobility">Mobilités</a></li>
+                <li><a href="#engagement">Engagement civique</a></li>
+                <li><a href="#activities">Activités</a></li>
+                <!-- Bouton Langue Desktop -->
+                <li><a href="index_fr.html" class="lang-btn" style="font-weight: 700; color: #2563eb;">EN</a></li>
+            </ul>
+        </nav>
+
+        <!-- Bouton Hamburger / Croix -->
+        <button class="hamburger" id="hamburger-btn" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <!-- Menu Déroulant Mobile -->
+        <div class="mobile-menu" id="mobile-menu">
+            <ul class="mobile-nav-links">
+                <li><a href="#welcome" class="mobile-link">Accueil</a></li>
+                <li><a href="#elevator" class="mobile-link">Elevator Pitch</a></li>
+                <li><a href="#engineering" class="mobile-link">Ingénierie</a></li>
+                <li><a href="#career" class="mobile-link">Carrière</a></li>
+                <li><a href="#mobility" class="mobile-link">Mobilités</a></li>
+                <li><a href="#engagement" class="mobile-link">Engagement civique</a></li>
+                <li><a href="#activities" class="mobile-link">Activités</a></li>
+                <!-- Bouton Langue Mobile -->
+                <li><a href="index_fr.html" class="mobile-link" style="font-weight: 700; color: #2563eb; margin-top: 0.5rem; display: inline-block;">EN</a></li>
+            </ul>
+        </div>
+    </header>
+<main>    
+        <!-- 1. WELCOME SECTION -->
+        <section id="welcome" class="section hero">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Damien<br>Martins--Alonso</h1>
+                    <p class="uvp" style="text-align: justify;">
+                        <strong>Bienvenue sur mon portfolio en ligne !</strong><br><br>
+                        Je suis étudiant en première année à l'ENSEEIHT, en filière Sciences du numérique, après avoir suivi deux ans de classes préparatoires scientifiques.<br>
+                        Passionné par le développement logiciel, la conception de systèmes et la programmation embarquée, j'ai pour objectif de mettre ces compétences au service du secteur aérospatial.<br>
+                           Découvrez ci-dessous mes projets techniques et mon parcours professionnel. Bonne visite !
+                    </p>
+                    <div class="tags">
+                        <span class="tag">📍 Toulouse, France</span>
+                        <span class="tag">🎓 INP-ENSEEIHT </span>
+                        <span class="tag">⚙️ SN </span>
+                    </div>
+                    <div class="actions">
+                        <a href="assets/CV_EN.pdf" class="btn" target="_blank">Télécharger CV (EN)</a>
+                        <a href="assets/CV_FR.pdf" class="btn" target="_blank">Télécharger CV (FR)</a>
+                        <a href="https://www.linkedin.com/in/damien-martins-alonso-7abb7a439/" class="btn btn-outline" target="_blank">LinkedIn</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="assets/photo.jpg" alt="Damien Martins--Alonso" style="width: 300px; height: 300px; border-radius: 50%; object-fit: cover; object-position: 65% 30%;">
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. ELEVATOR PITCH SECTION -->
+        <section id="elevator" class="section bg-light">
+            <h2 style="text-align: center;">Elevator Pitch</h2>
+            <p class="section-subtitle" style="text-align: center; margin-bottom: 30px;">  </p>
+            <div class="card video-card" style="margin: 0 auto; max-width: 800px;">
+                <div class="video-container">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Elevator Pitch" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+        </section>
+
+      <!-- 3. ENGINEERING COURSE SECTION -->
+        <section id="engineering" class="section">
+            <h2 style="text-align: center;">Cursus d'ingénierie</h2>
+           <p class="section-subtitle" style="text-align: center; margin-bottom: 30px;">  </p>
+            <div class="grid-2">
+                <div class="card">
+                    <h3>🛠️ Technical Skills</h3>
+                    <ul class="skills-list">
+                        <li><strong>Languages:</strong> Python, SQL, C++ / Arduino</li>
+                        <li><strong>Software:</strong> MATLAB, SiriL, PixInsight, Adobe Suite</li>
+                        <li><strong>Tools & Systems:</strong> Windows, Linux</li>
+                        <li><strong>Soft Skills:</strong> Teamwork, Problem Solving, Adaptability</li>
+                    </ul>
+                </div>
+
+               <div class="card project-card">
+                    <h3>🔭 Project</h3>
+                    <div style="margin-top: 15px;">
+                        <h4 style="font-size: 1.1rem; color: var(--primary-color); margin-bottom: 5px;">Miniature Equatorial Mount (TIPE)</h4>
+                        <span class="date" style="display: inline-block; margin-bottom: 10px;">2025 - 2026</span>
+                        <p>A miniature equatorial mount project carried out at the end of preparatory classes : the goal is to compensate for the Earth's rotation in order to capture high-resolution deep-sky astrophotography. The orientation and dynamic modeling are controlled by an Arduino board, integrating light sensors with anti-reflective shielding, while a custom Python image processing algorithm handles the fine tracking via a camera module.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 4. CAREER DEVELOPMENT SECTION -->
+        <section id="career" class="section bg-light">
+            <h2 style="text-align: center;">Career Development</h2>
+            <p class="section-subtitle" style="text-align: center; margin-bottom: 30px;">  </p>        
+            <div style="max-width: 800px; margin: 0 auto;">
+                <div class="card" style="margin-bottom: 30px;">
+                    <h3 style="text-align: center; color: var(--primary-color); margin-bottom: 20px;">Work Experience</h3>
+                    <div class="experience-timeline">
+                        <div class="timeline-item">
+                            <h4>Cashier</h4>
+                            <span class="date">2024 - 2025</span>
+                            <p>Customer service, rush hour management, and maintaining financial accuracy under pressure.</p>
+                        </div>
+                        <div class="timeline-item">
+                            <h4>Municipal Worker</h4>
+                            <span class="date">2023</span>
+                            <p>Selected via a motivation interview for a civic municipal project. Executed manual maintenance and urban renovation tasks (painting ground markings, varnishing outdoor furniture) under municipal staff supervision.</p>
+                        </div>
+                        <div class="timeline-item">
+                            <h4>Discovery Intern</h4>
+                            <span class="date">2019</span>
+                            <p>Immersion in artisanal production cycles and adaptation to early-morning teamwork constraints.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- 5. INTERNATIONAL MOBILITY SECTION -->
+        <section id="mobility" class="section">
+            <h2 style="text-align: center;">International Mobility</h2>
+            <p class="section-subtitle" style="text-align: center; margin-bottom: 30px;">   </p>
+            
+            <div style="max-width: 800px; margin: 0 auto;">
+                <div class="card" style="margin-bottom: 20px;">
+                    <h3 style="text-align: center; color: var(--primary-color);">Languages</h3>
+                    <p style="text-align: center; font-size: 1.1rem; line-height: 1.6;">
+                        🇫🇷 <strong>French:</strong> Native &nbsp; | &nbsp; 
+                        🇬🇧 <strong>English:</strong> B1 &nbsp; | &nbsp; 
+                        🇪🇸 <strong>Spanish:</strong> B1
+                    </p>
+                </div>
+                
+                <div class="card">
+                    <h3 style="text-align: center; color: var(--primary-color);">Mobility Projects</h3>
+                    <div style="display: flex; flex-direction: column; gap: 15px;">
+                        <div>
+                            <h4 style="margin-bottom: 5px;">🇸🇪 Chalmers University of Technology (Sweden)</h4>
+                            <p>Immersion in a top-tier technical and aerospace hub in Scandinavia, ideal for deepening my skills in embedded systems and software engineering. This stay will allow me to discover a new work culture, understand demanding industrial standards, and refine my professional English in a multicultural environment.</p>
+                        </div>
+                        <div>
+                            <h4 style="margin-bottom: 5px;">🇪🇸 Universidad Politécnica de Madrid - UPM (Spain)</h4>
+                            <p>An academic opportunity at the heart of the European aeronautics ecosystem, combining advanced coursework in digital sciences with a personal reconnection to my family origins. This project will allow me to immerse myself in an Iberian work culture while actively consolidating my fluency in Spanish.</p>
+                        </div>
+                        <div>
+                            <h4 style="margin-bottom: 5px;">🇮🇪 Dublin Partner University (Ireland)</h4>
+                            <p>A stay at the core of Europe's leading tech hub to explore software architecture, connected systems, and innovation. This experience will provide the opportunity to discover Anglo-Saxon working methods and perfect my professional English on a daily basis.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. SUSTAINABILITY & CIVIC ENGAGEMENT SECTION -->
+        <section id="engagement" class="section bg-light">
+            <h2 style="text-align: center;">Sustainability & Civic Engagement</h2>
+            <p class="section-subtitle" style="text-align: center; margin-bottom: 30px;">  </p>
+            <div class="grid-3">
+                <div class="card align-center">
+                    <div class="icon">⚖️</div>
+                    <h4>The Trial of King Kong</h4>
+                    <span class="date">2026</span>
+                    <p>Participated in an interactive theatre play addressing Harassment and Sexist & Sexual Violence (HVSS). The experience involved analyzing three scenarios before acting as the jury to debate and judge the cases, guided by a legal professional.</p>
+                </div>
+                
+                <div class="card align-center">
+                    <div class="icon">🌍</div>
+                    <h4>Climate Fresk</h4>
+                    <span class="date">2026</span>
+                    <p>Took part in the collaborative workshop "La Fresque du Climat" to map and deeply understand the systemic causes, mechanics, and consequences of global climate change.</p>
+                </div>
+
+                <div class="card align-center">
+                    <div class="icon">
+                        <!-- Véritable icône du Ruban Rose avec effet croisé intégré en SVG -->
+                        <svg width="32" height="32" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M50 15 C 30 15, 20 40, 35 65 L 60 95 C 60 95, 65 100, 70 95 C 75 90, 75 85, 70 80 L 45 50 C 35 40, 40 25, 50 25 C 60 25, 65 40, 55 50 L 30 80 C 25 85, 25 90, 30 95 C 35 100, 40 95, 40 95 L 65 65 C 80 40, 70 15, 50 15 Z" fill="#ff69b4" stroke="#e83e8c" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <h4>Pink Run (Festival Futur Proche)</h4>
+                    <span class="date">2026</span>
+                    <p>Ran the "Course Rose" during the Festival Futur Proche. A charity sporting event dedicated to raising funds, showing solidarity, and spreading awareness for the fight against breast cancer.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. SPORT & OTHER ACTIVITIES SECTION -->
+        <section id="activities" class="section">
+            <h2 style="text-align: center;">Sport & Other Activities</h2>
+            <p class="section-subtitle" style="text-align: center; margin-bottom: 30px;">  </p>        
+            <div class="grid-3">
+                <div class="card align-center">
+                    <div class="icon">🌌</div>
+                    <h4>Astrophotography</h4>
+                    <p>Deep-sky imaging (nebulae, galaxies, comets) and image pre-processing. Directly inspired my TIPE.</p>
+                </div>
+                <div class="card align-center">
+                    <div class="icon">⚽</div>
+                    <h4>Football</h4>
+                    <p>Playing at a regional competition level. Teaches me endurance, discipline, and team spirit.</p>
+                </div>
+                <div class="card align-center">
+                    <div class="icon">🎹</div>
+                    <h4>Music & Audio</h4>
+                    <p>Beginner piano player.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2026 Damien Martins--Alonso — ENSEEIHT</p>
+    </footer>
+<script>
+    const hamburgerBtn = document.getElementById('hamburger-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const mobileLinks = document.querySelectorAll('.mobile-link');
+
+    hamburgerBtn.addEventListener('click', () => {
+        hamburgerBtn.classList.toggle('active');
+        mobileMenu.classList.toggle('active');
+    });
+
+    mobileLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            hamburgerBtn.classList.remove('active');
+            mobileMenu.classList.remove('active');
+        });
+    });
+</script>
+</body>
+</html>
