@@ -123,12 +123,12 @@ footer { text-align: center; padding: 3rem 1rem; color: #64748b; font-size: 0.9r
     border-radius: 2px;
 }
 
-/* Menu Mobile Déroulant (aligné sous le nom, élégant et structuré) */
+/* Menu Mobile Déroulant (aligné sous le nom à gauche, élégant et en longueur) */
 .mobile-menu {
     position: absolute;
     top: 100%; /* S'affiche juste sous la navbar */
-    left: 5%;  /* S'aligne du côté gauche, sous ton nom */
-    width: 320px; /* Largeur idéale pour bien loger tous tes liens en longueur */
+    left: 5%;  /* Aligné à gauche, directement sous ton nom */
+    width: 320px; /* Belle largeur pour de la longueur */
     background-color: #ffffff;
     border-radius: 12px;
     border: 1px solid #e2e8f0;
@@ -178,7 +178,7 @@ footer { text-align: center; padding: 3rem 1rem; color: #64748b; font-size: 0.9r
     list-style: none;
     display: flex;
     flex-direction: column;
-    gap: 1.2rem; /* Légèrement plus d'espace entre les liens pour la longueur */
+    gap: 1.2rem;
     padding: 0;
     margin: 0;
 }
