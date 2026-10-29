@@ -13,19 +13,46 @@
 <body>
 
     <!-- HEADER / NAVIGATION -->
+    <!-- HEADER / NAVIGATION -->
     <header class="navbar">
         <div class="nav-brand"><a href="#welcome">Damien Martins--Alonso</a></div>
-        <nav>
+        
+        <!-- Menu Desktop -->
+        <nav class="desktop-nav">
             <ul class="nav-links">
                 <li><a href="#welcome">Welcome</a></li>
-                <li><a href="#elevator">Elevator Pitch</a></li>
+                <li><a href="#elevator">Pitch</a></li>
                 <li><a href="#engineering">Engineering</a></li>
                 <li><a href="#career">Career</a></li>
                 <li><a href="#mobility">Mobility</a></li>
-                <li><a href="#engagement">Civic Engagement</a></li>
+                <li><a href="#engagement">Engagement</a></li>
                 <li><a href="#activities">Activities</a></li>
             </ul>
         </nav>
+
+        <!-- Bouton Hamburger (visible uniquement sur petits écrans) -->
+        <button class="hamburger" id="hamburger-btn" aria-label="Toggle menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <!-- Menu Mobile Overlay -->
+        <div class="mobile-menu" id="mobile-menu">
+            <div class="mobile-menu-header">
+                <span class="mobile-brand">Damien Martins--Alonso</span>
+                <button class="close-btn" id="close-btn" aria-label="Close menu">&times;</button>
+            </div>
+            <ul class="mobile-nav-links">
+                <li><a href="#welcome" class="mobile-link">Welcome</a></li>
+                <li><a href="#elevator" class="mobile-link">Pitch</a></li>
+                <li><a href="#engineering" class="mobile-link">Engineering</a></li>
+                <li><a href="#career" class="mobile-link">Career</a></li>
+                <li><a href="#mobility" class="mobile-link">Mobility</a></li>
+                <li><a href="#engagement" class="mobile-link">Engagement</a></li>
+                <li><a href="#activities" class="mobile-link">Activities</a></li>
+            </ul>
+        </div>
     </header>
 
     <main>
@@ -218,6 +245,25 @@
     <footer>
         <p>© 2026 Damien Martins--Alonso — ENSEEIHT</p>
     </footer>
+<script>
+        const hamburgerBtn = document.getElementById('hamburger-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const closeBtn = document.getElementById('close-btn');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
 
+        hamburgerBtn.addEventListener('click', () => {
+            mobileMenu.classList.add('active');
+        });
+
+        closeBtn.addEventListener('click', () => {
+            mobileMenu.classList.remove('active');
+        });
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('active');
+            });
+        });
+    </script>
 </body>
 </html>
