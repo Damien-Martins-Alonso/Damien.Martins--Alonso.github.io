@@ -188,6 +188,18 @@ footer { text-align: center; padding: 3rem 1rem; color: #64748b; font-size: 0.9r
     color: #2563eb;
 }
 
+/* Style spécifique pour le bouton de langue */
+.desktop-nav .nav-links li a.lang-btn {
+    background-color: #f1f5f9;
+    padding: 0.4rem 0.8rem;
+    border-radius: 6px;
+    transition: background-color 0.2s;
+}
+
+.desktop-nav .nav-links li a.lang-btn:hover {
+    background-color: #e2e8f0;
+    color: #2563eb;
+}
 /* Affichage mobile */
 @media screen and (max-width: 1024px) {
     .desktop-nav {
