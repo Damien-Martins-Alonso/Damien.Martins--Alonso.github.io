@@ -123,45 +123,44 @@ footer { text-align: center; padding: 3rem 1rem; color: #64748b; font-size: 0.9r
     border-radius: 2px;
 }
 
-/* Menu Mobile Déroulant (aligné sous ton nom à gauche) */
+/* Menu Mobile (Panneau Latéral Toute Hauteur, aligné à gauche) */
 .mobile-menu {
-    position: absolute;
-    top: 100%; /* S'affiche juste sous la barre de navigation */
-    left: 5%;  /* S'aligne strictement du même côté que ton nom */
-    right: auto; /* Annule tout alignement à droite */
-    width: 320px; 
-    background-color: #ffffff;
-    border-radius: 12px;
-    border: 1px solid #e2e8f0;
-    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+    position: fixed; /* Fixe à l'écran, pas à la navbar */
+    top: 0;
+    left: 0;
+    width: 320px; /* Largeur du panneau */
+    height: 100vh; /* Prend toute la hauteur de l'écran */
+    background-color: rgba(255, 255, 255, 0.95); /* Fond blanc légèrement transparent pour un bel effet */
+    box-shadow: 2px 0 15px rgba(0, 0, 0, 0.1); /* Ombre légère sur la droite */
     z-index: 2000;
     display: flex;
     flex-direction: column;
-    padding: 1.5rem;
+    padding: 2rem;
+    
+    /* Animation de glissement depuis la gauche */
     opacity: 0;
     visibility: hidden;
-    transform: translateY(-10px);
-    transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
 }
 
 .mobile-menu.active {
     opacity: 1;
     visibility: visible;
-    transform: translateY(0);
+    transform: translateX(0); /* Le menu glisse vers sa position finale */
 }
 
+/* On garde ton design pour le reste du contenu du menu */
 .mobile-menu-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 1.5rem;
+    margin-bottom: 2.5rem; /* Un peu plus d'espace sous le nom */
     width: 100%;
-    border-bottom: 1px solid #f1f5f9;
-    padding-bottom: 0.75rem;
 }
 
 .mobile-brand {
-    font-size: 1rem;
+    font-size: 1.2rem;
     font-weight: 700;
     color: var(--primary-color, #1e293b);
 }
@@ -169,7 +168,7 @@ footer { text-align: center; padding: 3rem 1rem; color: #64748b; font-size: 0.9r
 .close-btn {
     background: none;
     border: none;
-    font-size: 1.8rem;
+    font-size: 2rem; /* Croix un peu plus grande */
     cursor: pointer;
     color: var(--primary-color, #1e293b);
     line-height: 1;
@@ -179,7 +178,7 @@ footer { text-align: center; padding: 3rem 1rem; color: #64748b; font-size: 0.9r
     list-style: none;
     display: flex;
     flex-direction: column;
-    gap: 1.2rem;
+    gap: 1.5rem; /* Plus d'espace entre les liens pour que ça respire */
     padding: 0;
     margin: 0;
 }
@@ -188,7 +187,7 @@ footer { text-align: center; padding: 3rem 1rem; color: #64748b; font-size: 0.9r
     font-size: 1.1rem;
     font-weight: 500;
     text-decoration: none;
-    color: #334155;
+    color: #475569;
     transition: color 0.2s;
 }
 
